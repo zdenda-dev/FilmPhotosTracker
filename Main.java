@@ -7,14 +7,14 @@ import java.io.PrintWriter;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        // Uložení všech fotek do proměnné
+        // Storing all photos into one variable
         String allPhotos = "";
 
-        // Output číslo
+        // Output file name
         String outputName = JOptionPane.showInputDialog("Enter series name:");
         JOptionPane.showMessageDialog(null, "The series name is going to be a name of an output.txt file.");
 
-        // Záznamy - fotky
+        // Records of photos (can by incerased)
         String photo1 = JOptionPane.showInputDialog("Any new photos?");
         allPhotos+= photo1;
         JOptionPane.showMessageDialog(null, "All photos: " + allPhotos);
@@ -37,7 +37,7 @@ public class Main {
 
 
 
-        // Uložení do output souboru
+        // Saving output file
         PrintWriter writer = new PrintWriter(  outputName + ".txt");
         writer.println("All photos: " + allPhotos);
         writer.close();
